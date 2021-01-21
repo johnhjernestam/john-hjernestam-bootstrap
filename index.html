@@ -1,27 +1,123 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="iconfortab.png"> <!-- Ikon som man kan se i tabben -->
+    <meta charset="UTF-8"> <!-- UTF-8 stödjer många språk -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ger instruktioner till webbläsaren om hur man styr sidans mått och skalning -->
+    <title>Bootstrap</title> <!-- Titeln för sidan som står i tabben -->
+    <link rel="stylesheet" href="bootstrap.css"> <!-- Länk till Bootstrap -->
+    <link rel="stylesheet" href="style.css"> <!-- Länk till min CSS -->
+
+    <!-- Detta är javascript från olika bibliotek -->
+    <!-- När javascripten länkar till dessa bibliotek får navbaren egenskapen att göra animationer  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
 
-    <div class="container">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark"> <!-- Här börjar navbaren -->
         
+        <a class="navbar-brand" href="#">John Hjernestam</a>
+      
+        <!-- Detta är togglern. Minskar man fönstret på sidan kommer togglern att komma upp. Detta är alltså en funktion som gör sidan mobilanpassad. --> 
+        <!-- När man trycker på den kommer alla begrepp att falla ned. Det är en animation som finns i javascript-bibliotek och länkarna till biblioteken finns i head. -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!-- data-toggle="collapse" medför att togglern faller ned -->
+          <span class="navbar-toggler-icon"></span> <!-- Ikonen för togglern -->
+        </button
+
+        <!-- Länkarna i navbaren -->
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+          <ul class="navbar-nav"> <!-- "ul" står för unsorted list  -->
+
+            <li class="nav-item"> <!-- I både unsorted lists och ordered lists finner man "li" taggen som definerar ett listobjekt -->
+              <a class="nav-link" href="#element">Element</a> <!-- Här href:ar jag till id:et element. Detta gör jag för varje begrepp. Förklarar mer om det nedanför där jag ger namn för alla divar. -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#id">ID</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#class">Class</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#meta">Meta</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#responsive">Responsive</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#http">http</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#https">https</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#compresseddata">Compressed Data</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#cdn">CDN</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#localbootstrap">Local Bootstrap</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#jquery">JQuery</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#flexbox">Flexbox</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#grid">Grid</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#codesnippets">Code Snippets</a>
+              </li>
+
+           </ul>
+        </div>
+    </nav>
+
+    <!-- Ny container för varje enskilt begrepp som innehåller rubrik, bild och förklaring -->
+    <div class="container" id="element"> <!-- Använder id för att man ska kunna trycka på ett begrepp och sedan komma dit. -->
+                                        <!-- Eftersom denna diven är döpt till element href:ar jag bara genom att skriva href="#element" (detta finns ovanför). -->  
+                                       <!-- När man trycker på ett begrepp kommer man till diven som tillhör begreppet. Detta har jag gjort med varje begrepp. Alltså har alla ett unikt id i containrarna nedanför. -->
         <h1>Element</h1>
 
-        <div class="imageclass">
-            <img src="https://i.ytimg.com/vi/DlQ1VVWZzaw/maxresdefault.jpg" class="img-fluid">
+        <div class="imageclass"> <!-- Egen klass som bestämmer storlek på bilden och marginal (bootstrap har en marginal med 25 px från vänster (om den är innanför en containerklass) men jag använde mig av margin 0 auto för att få bilden centrerad) -->
+            <img src="https://i.ytimg.com/vi/DlQ1VVWZzaw/maxresdefault.jpg" class="img-fluid"> <!-- Använder img-fluid för att bilden ska vara responsiv (max width 100% & auto height). Automatiskt ändras höjden på bilden beroende på hur bred bilden blir för att hålla sig i sin skala. -->
         </div>
 
-        <p>Element är t.ex. div som</p>
+        <p>Element har i de flesta fall en start- och sluttag. Webbsidor bygger på element
+            <br>som utgör själva innehållet på webbsidan. Exempel på element är div, p och h1. <!-- Använder br (breakline) för att texten ska bli kompakt -->
+        </p>
     </div>
 
-    <div class="container">
+    <!-- (Hela HTML-dokumentet har samma struktur som ovanför) -->
+
+    <div class="container" id="html">
         
         <h1>HTML</h1>
 
@@ -29,10 +125,12 @@
             <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg" class="img-fluid">
         </div>
 
-        <p>HTML är det vanligaste datorspråket som används för att </p>
+        <p>HTML är det vanligaste datorspråket för att skapa webbsidor. HTML utgör strukturen för en webbsida och CSS designar.  
+            <br>Strukturen kan innehålla allt från rubriker till bilder som du sedan med CSS kan positionera och designa.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="id">
         
         <h1>ID</h1>
 
@@ -40,10 +138,13 @@
             <img src="https://kduraiswami.github.io/blog/ClassIDs.png" class="img-fluid">
         </div>
 
-        <p>...</p>
+        <p>ID:et är något du döper ett objekt eller område till för att kunna 
+            <br>designa med CSS. Man använder ID för att specifiera något och
+            <br>det får därför bara användas en gång i ett HTML-dokument.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="class">
         
         <h1>Class</h1>
 
@@ -51,10 +152,12 @@
             <img src="https://www.wikitechy.com/step-by-step-html-tutorials/attributes/img/attributes-images/code-explanation-class-attribute-in-html.png" class="img-fluid">
         </div>
 
-        <p>...</p>
+        <p>Class är något du döper ett objekt till för att kunna designa med CSS. Skillnaden mellan class
+            <br>och ID är att flera element kan tillhöra en och samma klass medan ID bara kan användas en gång.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="meta">
         
         <h1>Meta</h1>
 
@@ -62,10 +165,13 @@
             <img src="https://www.researchgate.net/profile/Andreas_Veglis/publication/277619792/figure/fig2/AS:312773004283905@1451582303359/Html-Title-tag-and-Meta-Description-in-search-results.png" class="img-fluid">
         </div>
 
-        <p>...</p>
+        <p>Meta är inte synligt på ens webbsida men är viktigt eftersom man anger information om sidan till exempel vem som skapat den, 
+            <br>vad den handlar om och sökord. UTF-8 är en typ av kodning som man kan lägga i en meta-tag vilket stödjer 
+            <br>många språk och gör det möjligt för oss svenskar att kunna se bokstäverna å,ä, och ö på en webbsida.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="responsive">
         
         <h1>Responsive</h1>
 
@@ -73,10 +179,12 @@
             <img src="https://mailbakery.com/wp-content/uploads/2016/04/The-6-Best-Practices-for-Responsive-HTML-Email-Design_Layout.jpg" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>När man pratar om responsive pratar man oftast om en webbsida är mobilanpassad. Om en webbsida är 
+            <br>responsive så är den funktionell och ser bra ut oavsett om skärmen är stor eller liten.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="http">
         
         <h1>http</h1>
 
@@ -84,10 +192,12 @@
             <img src="https://kinsta.com/wp-content/uploads/2016/09/http-to-https.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Http står för Hypertext Transfer Protocol och är ett kommunikationsprotokoll som
+            <br>gör det möjligt för en webbläsare att kommunicera med en webbsida.
+        </p>
     </div>
-
-    <div class="container">
+    
+    <div class="container" id="https">
         
         <h1>https</h1>
 
@@ -95,21 +205,26 @@
             <img src="https://webbtanten.se/wp-content/uploads/2016/11/maste-alla-ga-over-till-https.jpg" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Https står för Hypertext Transfer Protocol Secure och är ett kommunikationsprotokoll som gör det möjligt för
+            <br>en webbläsare att kommunicera med en webbsida. Skillnaden mellan http och https är att https-data
+            <br>som skickas är krypterad vilket gör det mycket säkrare för användare att surfa på internet.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="compresseddata">
         
-        <h1>compressed data</h1>
+        <h1>Compressed Data</h1>
 
         <div class="imageclass">
             <img src="https://www.pingdom.com/wp-content/uploads/2018/08/image2.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Compressed data eller på svenska datakompression är när man tar data och kodar om 
+            <br>det på ett annat sätt som gör att man behöver använda färre informationsbärande enheter.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="cdn">
         
         <h1>CDN</h1>
 
@@ -117,21 +232,27 @@
             <img src="https://kinsta.com/se/wp-content/uploads/sites/9/2018/11/wordpress-cdn.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>CDN är ett distributionsnätverk som lagrar information och gör det snabbare att komma in på webbsidor. Om man 
+            <br>har webbsiodor som behöver nås av många människor över hela världen är det viktigt att ha en CDN-server. Det minskar drastiskt
+            <br>tiden det tar att komma in på webbsidan för användare som bor på andra sidan jordklotet.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="localbootstrap">
         
-        <h1>local bootstrap</h1>
+        <h1>Local Bootstrap</h1>
 
         <div class="imageclass">
             <img src="https://www.programmersought.com/images/784/22edeb7ab5dae4b0090a96b1312e5e08.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Local Bootstrap är ett biblotek som används som en grund/ram när man skapar webbsidor. Det innebär att om du bara skriver  
+            <br>din HTML-kod med element och klasser som delar samma namn som används i bootstrap-filen så kommer allt redan 
+            <br>vara designat (bootstrapens CSS). Man kan själv göra en egen CSS-fil och skriva över koden som finns i Bootstrap.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="jquery">
         
         <h1>JQuery</h1>
 
@@ -139,10 +260,12 @@
             <img src="https://dz2cdn1.dzone.com/storage/article-thumb/7800-thumb.jpg" class="img-fluid">
         </div>
 
-        <p>JQuery är ett biblotek</p>
+        <p>JQuery är världens mest använda Javascript-bibliotek som gör det 
+            <br>enklare att kommunicera och förändra element på en webbsida.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="flexbox">
         
         <h1>Flexbox</h1>
 
@@ -150,10 +273,13 @@
             <img src="https://i.ytimg.com/vi/aRMIdKRYg6c/maxresdefault.jpg" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Flexbox gör det möjligt för element i containrar att ordnas automatiskt beroende på hur stor skärmen är.
+            <br>Det är mycket användbart för att göra mobilanpassade webbsidor då skärmstorleken varierar.
+
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="grid">
         
         <h1>Grid</h1>
 
@@ -161,10 +287,12 @@
             <img src="https://miro.medium.com/max/3840/1*g_vlypICPvrvKTl1ee8PsQ.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Grid-layouter ser olika ut men har det gemensamt att de är indelade i rutor. Det förenklar för en eftersom man kan välja en 
+            <br>layout som passar för ens hemsida och därmed börja jobba direkt utan att behöva positionera rubriker, menyer, footer osv.
+        </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="codesnippets">
         
         <h1>Code snippets</h1>
 
@@ -172,9 +300,13 @@
             <img src="https://images.squarespace-cdn.com/content/v1/5d83e5d33f818a1d7852e89f/1569862368058-KAG6D7UE1MM8WTLX08IO/ke17ZwdGBToddI8pDm48kCk1TrV5xmI03_63Q3urf7J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UWFZfyKlbPFIRkFpleGYO7IBHZomdDllRB-fbGxH3BTloRwB-dUGsSquCnVTFQcaRg/CodeSnippetsScreenshot1.png" class="img-fluid">
         </div>
 
-        <p>.</p>
+        <p>Code snippets är oftast små områden av kod (eller text mm.) som kan återanvändas på andra ställen i ens 
+            <br>HTML-dokument. Det är mycket användbart att spara kod som återkommer regelbundet i 
+            <br> ens dokument. Det kallas för code snippets/utdrag avkod och man kan
+            <br>spara dem under "utdrag" i de allra flesta code editors.
+        </p>
     </div>
 
-
 </body>
+
 </html>
