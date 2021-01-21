@@ -13,7 +13,7 @@ p {
 
 h1 {
   padding: 25px; /* Enbart för att första begreppet inte ska sitta högst upp på sidan */
-  text-align: center; /* Rubriker är centrerad */
+  text-align: center; /* Gör att text ligger på en och samma rad, samt att rubriker positioneras i mitten */
 }
 
 .imageclass {
